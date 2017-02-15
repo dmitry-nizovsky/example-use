@@ -1,5 +1,6 @@
 import Header from '../../components/header/index.jsx';
 import './index.scss';
+import ff from 'ff-module';
 
 class Layout extends React.Component {
   constructor(props) {
@@ -7,8 +8,14 @@ class Layout extends React.Component {
   }
 
   counterHandler() {
-    if (this.state.count - 1 >= 0) {
-      this.setState({count: this.state.count - 1});
+    let number = 1;
+
+    if (ff.enabled('layout')) {
+      number = 2;
+    }
+
+    if (this.state.count - number >= 0) {
+      this.setState({count: this.state.count - number});
     }
   }
 
