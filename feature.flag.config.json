@@ -1,0 +1,9 @@
+[
+  {
+    "name": "header",
+    "state": true,
+    "modules": {
+      "./src/components/header/index.jsx": "./src/components/header/index-new.jsx"
+    }
+  }
+]
